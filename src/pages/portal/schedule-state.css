@@ -1,0 +1,44 @@
+.schedule-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f4f7fb;
+  color: #52617a;
+  text-align: center;
+  font:
+    500 13px Inter,
+    Arial,
+    sans-serif;
+}
+.schedule-loading [role="alert"] {
+  width: min(100%, 430px);
+  padding: 27px;
+  border: 1px solid #e3e9f1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 32px #1b31500d;
+}
+.schedule-loading [role="alert"] > b {
+  color: #1b2940;
+  font:
+    700 17px "Plus Jakarta Sans",
+    Inter,
+    sans-serif;
+}
+.schedule-loading [role="alert"] > p {
+  color: #6c7a91;
+}
+.schedule-loading [role="alert"] > button {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 6px;
+  background: #173c91;
+  color: #fff;
+  font:
+    700 10px Inter,
+    Arial,
+    sans-serif;
+  cursor: pointer;
+}

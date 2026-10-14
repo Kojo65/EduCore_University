@@ -1,0 +1,5 @@
+.form-notice.error{border-color:#f1c5c5;background:#fff4f3;color:#8f2525}
+.form-notice.success{border-color:#b9e3cf;background:#f0fbf5;color:#176341}
+.submit-button:disabled{opacity:.68;cursor:wait;transform:none}
+.auth-header .header-user{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#08266f;color:#fff}
+.auth-header .header-user:hover{background:#1659e8}

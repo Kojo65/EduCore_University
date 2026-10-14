@@ -1,0 +1,13 @@
+@media (min-width: 851px) and (max-width: 1080px) {
+  .student-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+  .student-stat { min-height: 103px; padding: 10px 9px; }
+  .student-stat > div:first-child > small { font-size: 7px; }
+  .student-stat > strong { font-size: 19px; }
+  .stat-icon { width: 27px; height: 27px; }
+  .stat-foot { gap: 3px; font-size: 7px; }
+  .student-course-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+  .student-course-card { padding: 10px 9px; }
+  .student-course-card h3 { font-size: 9px; }
+  .course-teacher, .milestone-box b, .milestone-box span { font-size: 7px; }
+}
+.student-no-assignments { margin: 0; padding: 20px; color: #738094; text-align: center; font-size: 10px; }

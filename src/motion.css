@@ -1,0 +1,177 @@
+/* Motion and finishing touches for the live university homepage. */
+:root { --navy: #102f68; --blue: #386de8; --ink: #172338; --muted: #667286; --line: #e5eaf1; }
+#root { min-height: 100vh; animation: route-enter 480ms cubic-bezier(.2,.7,.2,1) both; }
+@keyframes route-enter { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+.motion-item { opacity: 0; transform: translateY(18px); transition: opacity 600ms cubic-bezier(.2,.7,.2,1), transform 600ms cubic-bezier(.2,.7,.2,1); }
+.motion-item-visible { opacity: 1; transform: translateY(0); }
+.motion-item:nth-child(2) { transition-delay: 65ms; }
+.motion-item:nth-child(3) { transition-delay: 125ms; }
+.motion-item:nth-child(4) { transition-delay: 185ms; }
+.motion-item:nth-child(5) { transition-delay: 230ms; }
+.auth-panel, .gallery-card, .records-card, .role-portal-grid article { transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; }
+.auth-panel:hover, .role-portal-grid article:hover { transform: translateY(-2px); box-shadow: 0 13px 32px #13294b12; }
+.gallery-card:hover, .records-card:hover { transform: translateY(-2px); }
+.auth-page button, .records-app button, .role-portal button, .design-gallery a { -webkit-tap-highlight-color: transparent; }
+.auth-page button:not(:disabled):active, .records-app button:not(:disabled):active, .role-portal button:not(:disabled):active { transform: scale(.985); }
+.records-modal { animation: modal-enter 240ms cubic-bezier(.2,.8,.2,1) both; }
+@keyframes modal-enter { from { opacity: 0; transform: translateY(9px) scale(.985); } to { opacity: 1; transform: none; } }
+.main-nav.open { animation: menu-enter 180ms ease both; transform-origin: top; }
+.records-sidebar.sidebar-open { animation: drawer-enter 220ms cubic-bezier(.2,.7,.2,1) both; }
+@keyframes menu-enter { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@keyframes drawer-enter { from { opacity: .7; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+body { color: var(--ink); background: #fff; }
+.brand img { display: block; width: 164px; height: auto; }
+.site-header { height: 76px; background: #ffffffed; }
+.nav-wrap { width: min(100% - 64px, 1320px); }
+.main-nav > a { font-size: 12px; }
+.main-nav > .nav-home { background: transparent; color: var(--navy); box-shadow: inset 0 -2px var(--blue); border-radius: 0; }
+.hero { min-height: min(700px, calc(100svh - 76px)); }
+.hero-photo { background-position: center 44%; }
+.hero-shade { background: linear-gradient(90deg, #0b245eeF 0%, #102f68d9 43%, #102f6840 100%), linear-gradient(0deg, #071b44a8, transparent 62%); }
+.hero-content { padding-block: clamp(100px, 13vw, 164px); }
+.hero h1 { max-width: 760px; font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.055em; }
+.hero-content > p { max-width: 570px; font-size: 16px; }
+.eyebrow-pill { letter-spacing: .11em; }
+.section { padding-block: 88px; }
+.programs-section, .campus-section, .community-section { background: #fff; }
+.impact-section, .news-section { background: #f5f7fa; }
+.section-heading { margin-bottom: 34px; }
+.section-heading h2, .campus-copy h2 { letter-spacing: -.045em; }
+.section-heading p, .campus-copy > p { font-size: 14px; line-height: 1.75; }
+.kicker { letter-spacing: .16em; }
+.program-grid, .feature-grid, .news-grid { gap: 18px; }
+.program-card { min-height: 260px; padding: 22px; box-shadow: 0 5px 18px #142b4d08; }
+.program-card h3 { font-size: 16px; }
+.program-card p, .feature-card p, .news-card p { font-size: 12px; }
+.feature-card { padding: 23px; }
+.feature-card h3 { font-size: 15px; }
+.news-card { min-height: 230px; padding: 22px; }
+.news-card h3 { font-size: 15px; }
+.campus-grid { gap: clamp(44px, 7vw, 92px); }
+.campus-image-wrap { border-radius: 18px; box-shadow: 0 24px 55px #102b5124; }
+.map-card { padding: 14px 16px; }
+.quote-card { padding: 28px; min-height: 225px; box-shadow: 0 5px 20px #142b4d06; }
+.quote-card > p { font-size: 13px; }
+.admissions-section { padding-block: 44px; }
+.admissions-card { padding: 42px 46px; border: 1px solid #ffffff18; background: radial-gradient(ellipse at 90% 0%, #3963b5 0%, #1a3c7d 48%, #173572 100%); box-shadow: 0 18px 50px #102b5126; }
+.site-footer { background: #f5f7fa; }
+
+.motion-ready .hero-content,
+.motion-ready .stat,
+.motion-ready .section-heading,
+.motion-ready .program-card,
+.motion-ready .feature-card,
+.motion-ready .campus-copy,
+.motion-ready .campus-image-wrap,
+.motion-ready .news-card,
+.motion-ready .quote-card,
+.motion-ready .admissions-card {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 650ms cubic-bezier(.2,.7,.2,1), transform 650ms cubic-bezier(.2,.7,.2,1);
+}
+
+.motion-ready .hero-content { transform: translateY(14px); transition-delay: 80ms; }
+.motion-ready .stat:nth-child(2), .motion-ready .program-card:nth-child(2), .motion-ready .feature-card:nth-child(2), .motion-ready .news-card:nth-child(2), .motion-ready .quote-card:nth-child(2) { transition-delay: 80ms; }
+.motion-ready .stat:nth-child(3), .motion-ready .program-card:nth-child(3), .motion-ready .feature-card:nth-child(3), .motion-ready .news-card:nth-child(3) { transition-delay: 150ms; }
+.motion-ready .stat:nth-child(4), .motion-ready .program-card:nth-child(4), .motion-ready .feature-card:nth-child(4) { transition-delay: 220ms; }
+.motion-ready .is-visible { opacity: 1; transform: translateY(0); }
+
+.hero-photo { animation: hero-arrive 1.4s cubic-bezier(.2,.7,.2,1) both; }
+.eyebrow-pill span { animation: status-pulse 2.6s ease-in-out infinite; }
+.button svg, .card-link svg, .news-link svg, .all-news svg { transition: transform 220ms ease; }
+.button:hover svg, .card-link:hover svg, .news-link:hover svg, .all-news:hover svg { transform: translateX(4px); }
+.program-card, .feature-card, .news-card, .quote-card { border-color: #e8edf3; border-radius: 14px; }
+.program-card:hover, .feature-card:hover, .news-card:hover { border-color: #d9e3f2; box-shadow: 0 18px 38px #142b4d16; }
+.feature-icon { transition: color 220ms ease, background 220ms ease, transform 220ms ease; }
+.feature-card:hover .feature-icon { color: #fff; background: var(--navy); transform: translateY(-2px) rotate(-4deg); }
+.site-header { box-shadow: 0 4px 18px #152d4d06; }
+.main-nav > a, .portal-link, .footer-grid a { transition: color 180ms ease, background 180ms ease; }
+.main-nav > a:focus-visible, .button:focus-visible, .tabs button:focus-visible, a:focus-visible, .menu-toggle:focus-visible { outline: 3px solid #72a0ff; outline-offset: 3px; }
+
+@keyframes hero-arrive { from { transform: scale(1.075); } to { transform: scale(1.02); } }
+@keyframes status-pulse { 0%, 100% { box-shadow: 0 0 0 3px #89d7ff30; } 50% { box-shadow: 0 0 0 6px #89d7ff18; } }
+
+@media (max-width: 700px) {
+  .site-header { height: 66px; }
+  .nav-wrap { width: calc(100% - 32px); }
+  .brand img { width: 150px; }
+  .hero { min-height: 550px; }
+  .hero-content { padding-block: 76px; }
+  .hero h1 { font-size: 42px; }
+  .section { padding-block: 52px; }
+  .admissions-card { padding: 24px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .motion-ready .hero-content, .motion-ready .stat, .motion-ready .section-heading, .motion-ready .program-card, .motion-ready .feature-card, .motion-ready .campus-copy, .motion-ready .campus-image-wrap, .motion-ready .news-card, .motion-ready .quote-card, .motion-ready .admissions-card { opacity: 1; transform: none; }
+}
+/* Precise pointer tilt is enabled only for mouse-like pointers; reduced motion is respected. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .program-card, .feature-card, .news-card {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 180ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+  .program-card:hover, .feature-card:hover, .news-card:hover {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-3px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .program-card, .feature-card, .news-card { transform: none !important; }
+}
+/* Consistent keyboard focus and touch feedback across the public and portal interfaces. */
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid #c7a66a; outline-offset: 3px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+/* Shared finishing pass for account, course, and role-specific screens. */
+.auth-header { position: sticky; top: 0; backdrop-filter: blur(14px); background: #ffffffed; }
+.auth-panel { border-radius: 18px; box-shadow: 0 16px 44px #10264a12; }
+.auth-page .submit-button, .auth-page .header-apply { transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease; }
+.auth-page .submit-button:hover:not(:disabled), .auth-page .header-apply:hover { transform: translateY(-1px); box-shadow: 0 8px 18px #10264a20; }
+.my-course-card, .course-summary-card { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.my-course-card:hover, .course-summary-card:hover { transform: translateY(-2px); border-color: #cbd7df; box-shadow: 0 12px 28px #17345112; }
+.courses-tabs button, .courses-view-switch button { transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease; }
+.courses-modal-backdrop, .student-modal-backdrop { backdrop-filter: blur(5px); }
+.role-portal-welcome { background-image: radial-gradient(ellipse at 92% 5%, #ffffff20, transparent 38%); }
+@media (prefers-reduced-motion: reduce) {
+  .my-course-card, .course-summary-card, .auth-page .submit-button, .auth-page .header-apply { transition: none !important; }
+  .my-course-card:hover, .course-summary-card:hover, .auth-page .submit-button:hover:not(:disabled), .auth-page .header-apply:hover { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #root { animation: none !important; }
+  .auth-panel:hover, .role-portal-grid article:hover, .gallery-card:hover, .records-card:hover,
+  .my-course-card:hover, .course-summary-card:hover, .program-card:hover, .feature-card:hover, .news-card:hover,
+  .student-dashboard .priority-action:hover, .student-dashboard .student-course-card:hover {
+    transform: none !important;
+  }
+  .auth-panel:hover, .role-portal-grid article:hover, .gallery-card:hover, .records-card:hover,
+  .my-course-card:hover, .course-summary-card:hover { box-shadow: inherit; }
+  .feature-card:hover .feature-icon { transform: none !important; }
+}
+@keyframes hero-arrive {
+  from { transform: scale(1.09) translateY(0); }
+  to { transform: scale(1.04) translateY(var(--hero-shift, 0px)); }
+}
+.site-header .main-nav > a.nav-home.is-current { color: #142d4c; background: transparent; box-shadow: inset 0 -2px #c6a66b; }
+.site-header .main-nav > a.is-current { color: #142d4c; background: #f3f0e8; }
+.hero-content > * { max-width: 760px; }
+body .hero .hero-content h1 { max-width: 920px; font-size: clamp(46px, 5.2vw, 70px); font-family: Georgia, 'Times New Roman', serif; font-weight: 600; line-height: 1.04; letter-spacing: -.04em; }
+@media (max-width: 700px) {
+  body .hero .hero-content h1 { max-width: 650px; font-size: clamp(38px, 10vw, 50px); }
+}
+@media (max-width: 700px) {
+  .nav-wrap { width: calc(100% - 32px); gap: 8px; }
+  .site-header .menu-toggle { margin-left: 0; }
+  .site-header .nav-actions { margin-left: auto; }
+  .hero-content { width: calc(100% - 36px); max-width: 620px; margin-inline: auto; }
+  .hero-content > * { max-width: 100%; }
+  body .hero .hero-content h1 { width: 100%; max-width: 100%; font-size: clamp(35px, 9.2vw, 44px); line-height: 1.04; letter-spacing: -.04em; overflow-wrap: normal; }
+  .hero-content > p { width: 100%; font-size: 14px; line-height: 1.6; }
+  .stats .container { width: calc(100% - 32px); }
+  .stat-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { min-width: 0; padding: 12px 10px; }
+  .stat-title, .stat p { overflow-wrap: anywhere; }
+}
+html, body, #root { max-width: 100%; }

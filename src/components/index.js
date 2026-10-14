@@ -1,0 +1,17 @@
+export { default as Brand } from "./shared/Brand.jsx";
+export { default as HomePage } from "../pages/home/HomePage.jsx";
+export { default as HomeHeader } from "./home/Header.jsx";
+export { default as Hero } from "./home/Hero.jsx";
+export { default as Stats } from "./home/Stats.jsx";
+export { default as Programs } from "./home/Programs.jsx";
+export { default as Impact } from "./home/Impact.jsx";
+export { default as Campus } from "./home/Campus.jsx";
+export { default as News } from "./home/News.jsx";
+export { default as Community } from "./home/Community.jsx";
+export { default as Admissions } from "./home/Admissions.jsx";
+export { default as HomeFooter } from "./home/Footer.jsx";
+export { default as AdmissionsPage } from "../pages/auth/AuthPage.jsx";
+export { default as AdmissionsAccessForm } from "./auth/AccessForm.jsx";
+export { default as AdmissionsHelpCard } from "./auth/HelpCard.jsx";
+export { default as DashboardPage } from "../pages/portal/DashboardPage.jsx";
+export { default as DesignGallery } from "../pages/gallery/DesignGallery.jsx";

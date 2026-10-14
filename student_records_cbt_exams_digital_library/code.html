@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f7f9fb", "surface-container-low": "#f2f4f6", "secondary-fixed": "#dbe1ff", "error": "#ba1a1a", "primary-fixed": "#dce1ff", "on-error": "#ffffff", "on-secondary-fixed": "#00174b", "on-surface": "#191c1e", "secondary-fixed-dim": "#b4c5ff", "on-primary-fixed": "#00164e", "surface-tint": "#4059aa", "on-secondary": "#ffffff", "on-surface-variant": "#444651", "outline": "#757682", "on-primary": "#ffffff", "surface-container": "#eceef0", "surface-variant": "#e0e3e5", "primary-container": "#1e3a8a", "secondary": "#0051d5", "on-secondary-container": "#fefcff", "primary-fixed-dim": "#b6c4ff", "tertiary-fixed": "#c4e7ff", "surface-container-high": "#e6e8ea", "on-secondary-fixed-variant": "#003ea8", "tertiary-fixed-dim": "#7bd0ff", "on-tertiary-fixed": "#001e2c", "on-error-container": "#93000a", "surface": "#f7f9fb", "inverse-primary": "#b6c4ff", "surface-dim": "#d8dadc", "primary": "#00236f", "inverse-surface": "#2d3133", "on-background": "#191c1e", "surface-container-highest": "#e0e3e5", "on-tertiary-container": "#2eb7f2", "surface-container-lowest": "#ffffff", "outline-variant": "#c5c5d3", "secondary-container": "#316bf3", "error-container": "#ffdad6", "on-primary-container": "#90a8ff", "surface-bright": "#f7f9fb", "inverse-on-surface": "eff1f3", "on-primary-fixed-variant": "#264191", "on-tertiary": "#ffffff", "tertiary": "#002e41", "on-tertiary-fixed-variant": "#004c69", "tertiary-container": "#00455f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-lg": "3rem", "space-xs": "0.25rem", "margin": "2rem", "gutter": "1.5rem", "gutter-sm": "1rem", "margin-sm": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "label-sm": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-md"><img alt="EduCore University Official Crest &amp; Wordmark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WL79WuY4R1U6FxICffDFb0berqVzA3NmNqthF80qXTOV3fkOdkhGvlx839YvnsfW4o6BbKH0Z0_NR6wwBvewa7lHnuEH1KkY5XCIIV2Ch3nIebS0qmqRgCUlMk6GjyZJnUOCjHKBpYeFStwjcKNKGkyq7CMqBaEDbJTVPBTPIFvOR5KVXeqTC3hAv5X1Fg2QWFw1hpKO0ZMKx4zpwk6dr0yO3nbQS-wlqGfDIvaKajGXt38RRnu2_wtw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">EduCore</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">University Portal</span></div></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase px-space-sm tracking-wider">Academic Suite</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-courses" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>My Courses</span></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">5</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="course-catalog" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Course Catalog</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="schedule" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Schedule</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="assignments" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments</span></div><span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">3 pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="examinations" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Examinations</span></div><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">1 active</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="textbooks-and-library" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">local_library</span><span>Textbooks &amp; Library</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="results-and-gpa" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grade</span><span>Results &amp; GPA</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Attendance</span></div><span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">96%</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="announcements" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Announcements</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="messages" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>Messages</span></div><span class="w-2 h-2 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="fees-and-finance" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Fees &amp; Finance</span></div></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="px-space-sm py-space-xs mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Preferences</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="student-profile" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">person</span><span>Student Profile</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></div></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Search courses, assignments, faculty..." type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span><span class="font-label-md text-label-md text-on-surface">Fall Semester 2024 - Week 8</span><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="hidden 2xl:flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Undergraduate - Year 3 • B.Sc. Computer Science</span></div><div class="flex items-center gap-space-xs"><button class="relative p-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">mail</span></button><button class="relative p-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">4</span></button></div><div class="flex items-center gap-space-md pl-space-sm"><div class="flex items-center gap-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvvMxGN1E1D2QvXXLEZgeKO-gkhdFsCOjPnA34xnuu122iqLFDMmPBDzN8q2lUWzvs0oXuaQAXsKo2fBN03hl-ge_Kd5kpi2yg79Bfi5QgIEgqa1vfyDKeH8ZBaShGVFCNPENHO4DYnGjFieC84GXU34rtMcdqFBXHNqW4zZr6pklYg07ctQg1333pNEn4V5FwwG_4cHZ9VQo8xTFCTATuP9W3gVkf27_jWEcyTkfGPjMI0xycz8Am"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold">Isaac Thorne</span><span class="font-body-sm text-body-sm text-outline">STU-882194</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-gutter-lg pb-margin-lg">
+<!-- Top Page Header & Quick Utilities Bar -->
+<div class="flex flex-col 2xl:flex-row 2xl:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-outline font-label-sm uppercase tracking-wider">
+<span>College of Basic &amp; Applied Sciences</span>
+<span>•</span>
+<span>Department of Computer Science</span>
+<span>•</span>
+<span class="text-secondary font-bold">UG-Legon Accreditations</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Academic Records, CBT Examinations &amp; Digital Library</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Centralized portal for secure Computer-Based Testing (CBT), verified university transcript archives, interactive syllabus textbooks, and Level 400 specialized elective enrolment.
+      </p>
+</div>
+<!-- Quick Action Launchpad -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all" onclick="document.getElementById('cbt-terminal-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Launch Scheduled CBT Exam</span>
+</button>
+<a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" href="#digital-library-section">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span>Browse Textbooks</span>
+</a>
+<button class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="triggerTranscriptAlert()">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Official Transcript (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Primary Asymmetric Grid: CBT Live Environment & Academic Summary Matrix -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Active CBT Examination Terminal Card (Col 7) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-56 h-56 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">UG-CBT Secure Engine v4.2</span>
+</div>
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-space-md py-1 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+            Ready to Launch / System Checked
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mid-Semester Examination • Level 300</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">CS304: Artificial Intelligence &amp; Algorithmic Heuristics</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Coverage: State-Space Search, A* Optimization, Alpha-Beta Minimax, and First-Order Knowledge Representation.
+          </p>
+</div>
+<!-- Meta Specification Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Duration</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">90 Mins</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Questions</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">60 MCQs</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Schedule</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Today, 2:00 PM</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Venue</span>
+<span class="font-headline-sm text-headline-sm text-secondary">Hall 4 / Proctored</span>
+</div>
+</div>
+<!-- System Diagnostics Checklist & Integrity Warning -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+              Lockdown Browser Security Protocols
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Biometric Camera Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Full screen lock enforced. Dual-monitor configurations and clipboard listeners are automatically sequestered. Any window blur will trigger an invigilation flag.
+          </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-lg pt-space-md border-none">
+<div class="flex items-center gap-space-sm text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Camera, Microphone &amp; Bandwidth Verified (42.8 Mbps)</span>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-all flex items-center justify-center gap-space-sm" onclick="document.getElementById('cbt-terminal-modal').classList.remove('hidden')">
+<span>Enter CBT Exam Environment</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Academic Honors & Real-Time Performance Matrix (Col 5) -->
+<div class="xl:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">UG Senate Registry Standard</span>
+<h3 class="font-headline-md text-headline-md text-primary">Academic Performance Index</h3>
+</div>
+<span class="px-space-sm py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full font-bold">
+            First Class Standing
+          </span>
+</div>
+<!-- Big Highlight Metric Row -->
+<div class="grid grid-cols-3 gap-space-md">
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cumulative GPA</span>
+<span class="font-headline-xl text-headline-xl text-primary font-bold">3.84</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Scale 4.00</span>
+</div>
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase">Earned Credits</span>
+<span class="font-headline-xl text-headline-xl text-primary font-bold">84</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Min. 120 req.</span>
+</div>
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase">Major Core Rank</span>
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">Top 3%</span>
+<span class="font-body-sm text-body-sm text-outline">Cohort of 210</span>
+</div>
+</div>
+<!-- Grade Progression Distribution Visual -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Letter Grade Distribution (Past 2 Semesters)</span>
+<span class="font-label-sm text-label-sm text-outline">Total 24 Courses</span>
+</div>
+<!-- Custom SVG Distribution Chart -->
+<svg class="w-full h-12 text-primary" fill="none" viewbox="0 0 360 48">
+<rect class="fill-primary" height="32" rx="4" width="160" x="0" y="8"></rect>
+<rect class="fill-secondary" height="32" rx="4" width="110" x="164" y="8"></rect>
+<rect class="fill-secondary-fixed-dim" height="32" rx="4" width="60" x="278" y="8"></rect>
+<rect class="fill-surface-variant" height="32" rx="4" width="18" x="342" y="8"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="12" font-weight="600" x="75" y="29">A / A+ (11)</text>
+<text fill="#ffffff" font-family="Inter" font-size="12" font-weight="600" x="210" y="29">B+ (8)</text>
+<text fill="#00174b" font-family="Inter" font-size="11" font-weight="600" x="298" y="29">B (4)</text>
+</svg>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span>A (70-100%)</span></div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span>B+ (65-69%)</span></div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span><span>B (60-64%)</span></div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span><span>Others</span></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dean's Honour List distinction granted for 2 consecutive sessions.</span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors flex items-center gap-1 font-bold" onclick="triggerVerificationBadge()">
+<span>Verify Dean's Seal</span>
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Historical Examination Ledgers & Results Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Certified Departmental Ledger</span>
+<h2 class="font-headline-md text-headline-md text-primary">Academic Examination Ledger (Level 200 &amp; 300)</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+          Filter: All Semesters
+        </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+          Department: CS / BAS
+        </button>
+</div>
+</div>
+<!-- Ledger Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-md text-label-md">
+<th class="py-3 px-space-md rounded-l-lg">Course Code</th>
+<th class="py-3 px-space-md">Course Title</th>
+<th class="py-3 px-space-md text-center">Credits</th>
+<th class="py-3 px-space-md">Exam Date</th>
+<th class="py-3 px-space-md text-center">Raw Score</th>
+<th class="py-3 px-space-md text-center">Grade</th>
+<th class="py-3 px-space-md text-center">Grade Point</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Official Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-lg text-primary font-bold">CS301</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Data Structures &amp; Advanced Algorithms</span>
+<span class="font-body-sm text-body-sm text-outline">Instructors: Dr. K. Quist, Prof. Mensah</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">3</td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-body-sm">Dec 14, 2023</td>
+<td class="py-3.5 px-space-md text-center font-semibold">94 / 100</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">A+</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold text-primary">4.00</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-lg text-primary font-bold">MATH210</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Linear Algebra &amp; Vector Analysis</span>
+<span class="font-body-sm text-body-sm text-outline">Instructors: Dr. E. Boateng</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">3</td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-body-sm">Dec 18, 2023</td>
+<td class="py-3.5 px-space-md text-center font-semibold">88 / 100</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold text-primary">4.00</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-lg text-primary font-bold">BAS101</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Foundations of Applied Physical Science</span>
+<span class="font-body-sm text-body-sm text-outline">Instructors: Faculty of Applied Sciences</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">3</td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-body-sm">Dec 09, 2023</td>
+<td class="py-3.5 px-space-md text-center font-semibold">81 / 100</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">B+</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold text-primary">3.50</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md font-label-lg text-primary font-bold">ENG204</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Academic Writing &amp; Technical Communication</span>
+<span class="font-body-sm text-body-sm text-outline">Instructors: Department of Humanities</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold">2</td>
+<td class="py-3.5 px-space-md text-on-surface-variant font-body-sm">Dec 21, 2023</td>
+<td class="py-3.5 px-space-md text-center font-semibold">91 / 100</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">A</span>
+</td>
+<td class="py-3.5 px-space-md text-center font-bold text-primary">4.00</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Digital Textbook Library & Course Material Reader Section -->
+<div class="flex flex-col gap-space-lg" id="digital-library-section">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Balme Digital Repository Integration</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Digital Textbook Library &amp; AI Reader</h2>
+</div>
+<!-- College & Discipline Filters -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Hierarchy:</span>
+<span class="bg-surface-container-high px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface">CBAS</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface">Computer Science</span>
+<span class="text-outline">/</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-space-sm py-1 rounded font-label-sm text-label-sm font-bold">AI &amp; Algorithms</span>
+</div>
+</div>
+<!-- Featured Interactive Reader Banner Card (AI Modern Approach) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Textbook Visual Placeholder -->
+<div class="lg:col-span-4 relative group">
+<div class="w-full h-80 rounded-xl overflow-hidden bg-primary shadow-md relative">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-85 group-hover:scale-105 transition-transform duration-500" data-alt="Cover illustration of Artificial Intelligence A Modern Approach textbook with crisp navy and collegiate blue hues, mathematical search tree graph nodes, glowing probabilistic networks, elegant academic publication aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtX0ZxUuUwKBbPmX4tSNQjJtnAiWYF7B9YukyA42TN5oaoC0J7UQZz-tXefsTwiR3WvfuTbsttMe-QyQjyC72abOhuiYmLD2ivhpkPWOvSE1FC_e5Km2M0j8EST_PX3euLdnVKppkO3T5a7wADVhmmXxuN5Cu-wKx6hjaSxUd5ph3xbiwvficXzwYIRctgWCXwtFUVOmmpGa9rH_Lpdnvp6Cb4P024_NwwkRWqoUiG2ZVS0i39pTaL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent p-space-md flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase tracking-widest">4th Global Edition</span>
+<h4 class="font-headline-sm text-headline-sm text-on-primary">Stuart Russell • Peter Norvig</h4>
+<span class="font-body-sm text-body-sm text-on-primary-container">Official Textbook • CS304 Core</span>
+</div>
+</div>
+</div>
+<!-- Textbook Synopsis & Reader Operations -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-0.5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-sm text-label-sm font-bold">Active Syllabus Core</span>
+<span class="px-space-sm py-0.5 bg-surface-container-high text-on-surface rounded-full font-label-sm text-label-sm">Balme Library e-Reserve License: Permanent</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary">Artificial Intelligence: A Modern Approach &amp; Algorithmic Foundations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            The definitive collegiate survey on intelligent agents, informed search methods, adversarial gameplay, constraint satisfaction, and modern heuristic evaluations. Fully synced with Dr. Mensah's lecture slide deck and lab benchmarks.
+          </p>
+</div>
+<!-- Student Progress In-Book -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Reading Benchmark: Chapter 7 (Logical Agents &amp; Propositional Logic)</span>
+<span class="font-label-md text-label-md text-secondary font-bold">64% Completed</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 64%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Last read: Yesterday at 9:42 PM (Page 248 of 1,152)</span>
+</div>
+<!-- Reader Action CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center gap-space-xs shadow-sm" onclick="openReaderModal()">
+<span class="material-symbols-outlined text-[18px]">chrome_reader_mode</span>
+<span>Read Online (Reader Mode)</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" onclick="triggerDownloadNotification('AI_Modern_Approach_Annotated.pdf')">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download Annotated PDF</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" id="bookmark-btn" onclick="toggleBookmark()">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span id="bookmark-text">Bookmark Syllabus Chapter</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Related Collegiate Textbooks Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Textbook Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cover of Database System Concepts collegiate textbook, relational algebra diagrams, elegant navy and slate tones, academic computer science edition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwxKDisq3dQUdzmszqPK-VUR7TowCkD98fKzUI2mfqafTZSkVp1_SDi5ymFvz2-3gq-pCKsukTRkOaujXCxg7NBL61gTcnql_oJMnZQutdo-2lSkKB2d2K4nJVF-d4QXCKXuU2ZkW9O8Wd_BDezCJvGmutyE2CW4yY0Mtq-JlNg0BbksWzHOJt2tPQqmfohoF1pUXkHEKnwUX48AO9aktXUmFeO4mvW_AytOrmxAoyAn4dTDCwExdU"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary font-bold">CS302 Core</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Silberschatz, Korth, Sudarshan</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mt-1">Database System Concepts (7th Ed.)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              SQL optimization, ACID transactions, relational decomposition, and distributed query processing.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-none">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Chapter 4 Indexed</span>
+<button class="text-primary hover:text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span>Read Material</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Textbook Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Discrete Mathematics and Its Applications textbook cover featuring graph theory webs and geometric proofs in scholarly deep blue and cool grey hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAveyZhfyNJzZE_Vp8mSpfkEM4rPlmq2R_OLLVsb9jgcoyFjUKf2xM3pfFd_fEcGwG2zfuTjDPk3t9cG8TtW_yjUo2NLZRj1iS-5yMpLVXQ7qdg2YiVhJWUzvJOCpZilqy_mr46T9c73piIRefdIJ36whwPznUgLrGwESTJiK818zQ1Szz2ghNb3oZSZEJR4OQCvCpnHkWPkvImpjgto6CY4lHq8kb2zG3vn-WenvMRPxD9Ws-rr64"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary font-bold">MATH205</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Kenneth H. Rosen</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mt-1">Discrete Mathematics &amp; Applications</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              Combinatorics, formal predicate proofs, Boolean lattices, and complexity bounds for algorithms.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-none">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Reference Library</span>
+<button class="text-primary hover:text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span>Read Material</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Textbook Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cover of Principles of Distributed Systems book, cluster nodes, consensus protocols, futuristic technical clean styling with royal blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZtyCc2t5KHlkJdOGLHPWJD-xPCWSBZxVvlW2QjFoee-OjyFt7ZE4ZxQ10BMMoXocT4dhQQ8pKsnl9JbIv11J_BbG8NjNvvGVP98rYBDfxk7UKnlgb0oVnFXgsDwFuDiOI0MB0dNIPYXB6D7dNzqdEaR2nkSLWYR64aTqAZIZpfRKNmUieghRf0G7YfyzwXag2-n1Y8e6k71EogO9kH_jC3jAgHjWQw17jV2mnUMwNQohAk3g8hffc"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary font-bold">CS312 Elective</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">George Coulouris et al.</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mt-1">Distributed Systems: Concepts &amp; Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              RPC models, Byzantine consensus, vector clocks, and peer-to-peer enterprise architecture.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-none">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Supplementary</span>
+<button class="text-primary hover:text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span>Read Material</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Elective Course Selection & Registration Module (Level 400 Preparation) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Academic Year 2024/2025 • Semester 2 Pre-Registration</span>
+<h2 class="font-headline-md text-headline-md text-primary">Elective Specialization &amp; Study Plan Allocation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Select advanced modules in accordance with Department of Computer Science graduation tracks.
+        </p>
+</div>
+<!-- Realtime Credit Counter Badge -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Registered Elective Load</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="credit-count-label">3 of 9 Max Credits</span>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Status</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Eligible (GPA &gt; 3.00)</span>
+</div>
+</div>
+</div>
+<!-- Elective Options Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-space-xs">
+<!-- Elective 1 (Selected by Default) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between transition-all" id="course-card-cs402">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded font-bold">CS Track Core</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">3 Credits</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">CS402: Deep Learning &amp; Neural Computation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Backpropagation algorithms, convolutional vision models, transformers, and tensor computational graphs.
+            </p>
+</div>
+<div class="bg-surface-container p-space-xs rounded font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Prerequisites Met: CS301, MATH210</span>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold hover:bg-primary transition-colors flex items-center justify-center gap-1" id="btn-cs402" onclick="toggleCourseSelection('cs402', 3)">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Added to Study Plan</span>
+</button>
+</div>
+</div>
+<!-- Elective 2 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between transition-all" id="course-card-bas305">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded font-bold">Actuarial Module</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">3 Credits</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">BAS305: Actuarial Risk Analysis &amp; Modeling</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Stochastic interest rates, survival functions, life contingencies, and financial hazard forecasting.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Prerequisites Met: MATH210</span>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center gap-1" id="btn-bas305" onclick="toggleCourseSelection('bas305', 3)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add to Study Plan</span>
+</button>
+</div>
+</div>
+<!-- Elective 3 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between transition-all" id="course-card-eng310">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded font-bold">Robotics Lab</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">3 Credits</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">ENG310: Autonomous Robotics &amp; Kinematics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Differential drive mechanics, sensor fusion with Kalman filtering, and ROS 2 middleware programming.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Prerequisites Met: CS301</span>
+</div>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center gap-1" id="btn-eng310" onclick="toggleCourseSelection('eng310', 3)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add to Study Plan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Final Study Plan Submission Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-none">
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Registration closes on Friday, 11:59 PM GMT. Final approval processed by Faculty Academic Advisor.</span>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm" onclick="submitStudyPlan()">
+        Submit Approved Study Plan
+      </button>
+</div>
+</div>
+<!-- Modal / Floating Reader Window Emulation -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 flex items-center justify-center hidden p-space-md" id="reader-modal">
+<div class="bg-surface-container-lowest w-full max-w-4xl rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[870px]">
+<!-- Reader Header -->
+<div class="bg-primary text-on-primary p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm">Interactive Syllabus Reader</h3>
+<span class="font-body-sm text-body-sm text-on-primary-container">CS304 Core: Russell &amp; Norvig (4th Edition) • Chapter 3</span>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-primary-container text-on-primary" onclick="document.getElementById('reader-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Reader Body Content Preview -->
+<div class="p-space-lg overflow-y-auto font-body-md text-body-md leading-relaxed text-on-surface flex flex-col gap-space-md">
+<h4 class="font-headline-md text-headline-md text-primary">3.4 Uninformed Search Strategies vs. Heuristic Search</h4>
+<p>
+          A heuristic function, denoted <span class="font-semibold text-primary">h(n)</span>, is an estimated cost of the cheapest path from the state at node <span class="font-semibold text-primary">n</span> to a goal state. If a heuristic satisfies <span class="font-semibold text-primary">h(n) ≤ c(n, a, n′) + h(n′)</span> for every node <span class="font-semibold text-primary">n</span> and successor <span class="font-semibold text-primary">n′</span> generated by an action <span class="font-semibold text-primary">a</span>, it is deemed monotonic or consistent.
+        </p>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">Algorithmic Lemma 3.2: A* Optimality Proof</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            When applied to a graph search problem where all action costs are strictly greater than zero, tree-search A* is optimal if the heuristic is admissible; graph-search A* is optimal if the heuristic is consistent.
+          </p>
+</div>
+<p>
+          In typical heuristic search formulations within real-time robotics and game trees, strict monotonicity prevents the necessity of reopening nodes in the closed set, substantially reducing computational complexity bounds from exponential to sub-polynomial spaces.
+        </p>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Page 89 of 1,152 • Balme Digital Access Authenticated</span>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md" onclick="document.getElementById('reader-modal').classList.add('hidden')">
+          Close Reader
+        </button>
+</div>
+</div>
+</div>
+<!-- CBT Exam Terminal Launch Overlay Modal -->
+<div class="fixed inset-0 bg-on-surface/60 backdrop-blur-md z-50 flex items-center justify-center hidden p-space-md" id="cbt-terminal-modal">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-2xl shadow-xl overflow-hidden flex flex-col">
+<div class="bg-primary-container text-on-primary p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px]">laptop_mac</span>
+<span class="font-headline-sm text-headline-sm">CBT Safe Exam Browser Sandbox</span>
+</div>
+<button class="p-1 rounded hover:bg-primary text-on-primary" onclick="document.getElementById('cbt-terminal-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md bg-secondary-fixed/50 p-space-md rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[28px]">lock</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-secondary-fixed font-bold">Biometric Authentication &amp; Hardware Lock</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Student ID: Isaac Thorne (STU-882194)</span>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Secondary monitors disabled and decoupled</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Automated Proctoring Audio &amp; Video Feed Initiated</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+<span>Local keylogger defense activated</span>
+</li>
+</ul>
+<div class="bg-surface-container-low p-space-sm rounded-lg text-center font-label-sm text-label-sm text-outline">
+          Once entered, exiting full-screen mode before test submission invalidates your submission score.
+        </div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="document.getElementById('cbt-terminal-modal').classList.add('hidden')">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-bold hover:bg-primary transition-colors flex items-center gap-1" onclick="launchExamSession()">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Start Examination (CS304)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Banner Overlay (Toast) -->
+<div class="fixed bottom-6 right-6 bg-primary text-on-primary px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm z-50 transform translate-y-32 transition-transform duration-300" id="toast-notification">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">Notification message here</span>
+</div>
+</div>
+<script>
+  let registeredCredits = 3;
+  const courseStates = {
+    cs402: true,
+    bas305: false,
+    eng310: false
+  };
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toast-notification');
+    const msgEl = document.getElementById('toast-message');
+    const iconEl = document.getElementById('toast-icon');
+    
+    msgEl.textContent = message;
+    iconEl.textContent = icon;
+    toast.classList.remove('translate-y-32');
+    toast.classList.add('translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0');
+      toast.classList.add('translate-y-32');
+    }, 3800);
+  }
+
+  function toggleCourseSelection(courseId, credits) {
+    const btn = document.getElementById('btn-' + courseId);
+    const card = document.getElementById('course-card-' + courseId);
+
+    if (courseStates[courseId]) {
+      // Deselect
+      courseStates[courseId] = false;
+      registeredCredits -= credits;
+      btn.className = "w-full py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center gap-1";
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">add</span><span>Add to Study Plan</span>';
+      card.className = "bg-surface-container p-space-md rounded-xl flex flex-col justify-between transition-all";
+      showToast("Removed from Study Plan");
+    } else {
+      // Check max credits limit
+      if (registeredCredits + credits > 9) {
+        showToast("Maximum elective credit limit (9 Credits) reached!", "warning");
+        return;
+      }
+      courseStates[courseId] = true;
+      registeredCredits += credits;
+      btn.className = "w-full py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold hover:bg-primary transition-colors flex items-center justify-center gap-1";
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Added to Study Plan</span>';
+      card.className = "bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between transition-all";
+      showToast("Successfully enrolled into Study Plan");
+    }
+
+    document.getElementById('credit-count-label').textContent = registeredCredits + " of 9 Max Credits";
+  }
+
+  function toggleBookmark() {
+    const btn = document.getElementById('bookmark-btn');
+    const text = document.getElementById('bookmark-text');
+    if (text.textContent.includes('Bookmark')) {
+      text.textContent = 'Chapter 7 Bookmarked';
+      btn.classList.add('text-secondary');
+      showToast("Bookmark pinned to Student Portal Dashboard");
+    } else {
+      text.textContent = 'Bookmark Syllabus Chapter';
+      btn.classList.remove('text-secondary');
+      showToast("Bookmark removed");
+    }
+  }
+
+  function openReaderModal() {
+    document.getElementById('reader-modal').classList.remove('hidden');
+  }
+
+  function triggerDownloadNotification(fileName) {
+    showToast("Preparing " + fileName + " with University of Ghana digital watermark...");
+  }
+
+  function triggerTranscriptAlert() {
+    showToast("Generating official signed transcript PDF (CBAS Verified)...");
+  }
+
+  function triggerVerificationBadge() {
+    showToast("Dean's Seal verified: Ref #UG-CBAS-2023-9941A");
+  }
+
+  function launchExamSession() {
+    document.getElementById('cbt-terminal-modal').classList.add('hidden');
+    showToast("Connecting to Proctoring Hall 4 Server. Lockdown active.", "bolt");
+  }
+
+  function submitStudyPlan() {
+    showToast("Study Plan formally submitted to Academic Advisor & Registrar.", "task_alt");
+  }
+</script></main></div></body></html>
